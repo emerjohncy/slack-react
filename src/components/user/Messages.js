@@ -37,7 +37,7 @@ export default function Messages({
       redirect: "follow",
     };
 
-    fetch("http://206.189.91.54//api/v1/messages", requestOptions)
+    fetch("/api//api/v1/messages", requestOptions)
       .then((response) => response.text())
       .then((result) => console.log(result))
       .catch((error) => console.log("error", error));
@@ -62,7 +62,7 @@ export default function Messages({
     };
 
     fetch(
-      `http://206.189.91.54//api/v1/messages?sender_id=${headersObject.currentUserId}&receiver_class=${receiverClass}&receiver_id=${senderId}`,
+      `/api//api/v1/messages?sender_id=${headersObject.currentUserId}&receiver_class=${receiverClass}&receiver_id=${senderId}`,
       requestOptions
     )
       .then((response) => response.text())
@@ -151,7 +151,7 @@ export default function Messages({
       redirect: "follow",
     };
 
-    fetch("http://206.189.91.54//api/v1/users", requestOptions)
+    fetch("/api//api/v1/users", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         let arrayOfUsers = JSON.parse(result).data;

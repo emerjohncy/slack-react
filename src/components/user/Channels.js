@@ -29,7 +29,7 @@ export default function Channels({
   };
 
   let searchMember = (member) => {
-    fetch("http://206.189.91.54//api/v1/users", requestGet)
+    fetch("/api//api/v1/users", requestGet)
       .then((response) => response.text())
       .then((result) => {
         let parse = JSON.parse(result).data;
@@ -42,7 +42,7 @@ export default function Channels({
   };
 
   useEffect(() => {
-    fetch("http://206.189.91.54//api/v1/users", requestGet)
+    fetch("/api//api/v1/users", requestGet)
       .then((response) => response.text())
       .then((result) => {
         let parse = JSON.parse(result).data;
@@ -71,7 +71,7 @@ export default function Channels({
       redirect: "follow",
     };
 
-    fetch("http://206.189.91.54//api/v1/channel/add_member", requestOptions)
+    fetch("/api//api/v1/channel/add_member", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         console.log(result);
@@ -96,7 +96,7 @@ export default function Channels({
   };
 
   useEffect(() => {
-    fetch("http://206.189.91.54//api/v1/users", requestGet)
+    fetch("/api//api/v1/users", requestGet)
       .then((response) => response.text())
       .then((result) => {
         let parse = JSON.parse(result).data;

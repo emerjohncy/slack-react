@@ -54,7 +54,7 @@ export default function ListOfChannels({
       redirect: "follow",
     };
 
-    fetch("http://206.189.91.54//api/v1/channels", requestOptions)
+    fetch("/api//api/v1/channels", requestOptions)
       .then((response) => {
         return response.text();
       })
@@ -66,7 +66,7 @@ export default function ListOfChannels({
   };
 
   let addMember = (newMember) => {
-    fetch("http://206.189.91.54//api/v1/users", requestGet)
+    fetch("/api//api/v1/users", requestGet)
       .then((response) => response.text())
       .then((result) => {
         let parse = JSON.parse(result).data;
@@ -99,7 +99,7 @@ export default function ListOfChannels({
 
   // show channels
   const getChannelList = () => {
-    fetch("http://206.189.91.54//api/v1/channels", requestGet)
+    fetch("/api//api/v1/channels", requestGet)
       .then((response) => response.text())
       .then((result) => {
         let parse = JSON.parse(result).data;
@@ -161,7 +161,7 @@ export default function ListOfChannels({
   //get channel info
   let getChannelInfo = (channelid) => {
     fetch(
-      "http://206.189.91.54//api/v1/channels/" + channelid.toString(),
+      "/api//api/v1/channels/" + channelid.toString(),
       requestGet
     )
       .then((response) => response.text())

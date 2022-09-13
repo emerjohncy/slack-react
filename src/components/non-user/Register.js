@@ -25,7 +25,7 @@ const Register = () => {
       },
     };
 
-    fetch("http://206.189.91.54//api/v1/auth/", requestOptions)
+    fetch("/api//api/v1/auth/", requestOptions)
       .then((response) => response.text())
       .then((result) => {
         const apiObject = JSON.parse(result);
